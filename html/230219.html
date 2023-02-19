@@ -9,7 +9,7 @@
 
 <body>
     <pre>
-        首先学习了单选按钮，单选按钮的是表格的一种，需要使用form标签中的input标签
+        首先学习了单选按钮，单选按钮的是表单的一种，需要使用form标签中的input标签
         type指定为radio，并为其指定名字(同名只能单选)和值(用于后端收集数据)
         使用checked语句预选选项
         &lt;form&gt;
@@ -34,17 +34,21 @@
         form表单有几种属性，例如&lt;form name="input" action="html_form_action.php" method="get"&gt;
         其中，form name是表单名，action是表单数据发送至的服务器名，method是发送方法,包含get和post，其中post用于发送隐私数据例如密码
     </pre>
+    <p>本部分没有示例</p>
     <pre>
         再来是下拉清单，实现方式是&lt;select name=""&gt;&lt;option value=""&gt;&lt;/option&gt;&lt;/select&gt;组合，如要用于发送数据，则嵌套在表单中
         如果想设置缺省的预选值，在option的标签内加上selected。如果想要设置缺省的文本，使用input标签中的value属性
+        默认的预选值为第一个选项，如果希望默认空白选项，可以创建一个空白选项后用hidden隐藏。
+        不希望用户选择的选项可以用disabled调成不可选中
         表单中的恢复默认值可以用type="reset"实现
     </pre>
     今天想我几次呀
     <form>
         <select name="Miss">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="else" selected>其他<input name="times" type="text" value="好多好多！">次<input name="reset" type="reset" value="重置"></option>
+            <option selected hidden></option>
+            <option disabled value="1">1</option>
+            <option value="2" disabled>2</option>
+            <option value="else">其他<input name="times" type="text" value="好多好多！">次<input name="reset" type="reset" value="重置"></option>
         </select>
     </form>
     <pre>
@@ -71,5 +75,8 @@
         <input type="radio" name="sex" value="male"> 男<br />
         <input type="radio" name="sex" value="female"> 女
     </fieldset>
+    <pre>
+
+    </pre>
 </body>
 </html>
