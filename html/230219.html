@@ -1,12 +1,75 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>230219的成果~</title>
-        <link rel="short icon" href="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif">
-    </head>
+
+<head>
+    <meta charset="utf-8">
+    <title>230219的成果~</title>
+    <link rel="short icon" href="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif">
+</head>
 
 <body>
-
+    <pre>
+        首先学习了单选按钮，单选按钮的是表格的一种，需要使用form标签中的input标签
+        type指定为radio，并为其指定名字(同名只能单选)和值(用于后端收集数据)
+        使用checked语句预选选项
+        &lt;form&gt;
+            &lt;input type="radio" name="sex" value="male"&gt;
+        &lt;/form&gt;
+    </pre>
+    <form>
+        <input type="radio" name="sex" value="male" checked> 男<br />
+        <input type="radio" name="sex" value="female" checked> 女
+    </form>
+    <pre>
+        其次是复选按钮，type指定为checkbox 
+        &lt;form&gt;
+            &lt;input type="checkbox"&gt;
+        &lt;/form&gt;
+    </pre>
+    <form>
+        <input type="checkbox" name="sex" value="male" checked> 男<br />
+        <input type="checkbox" name="sex" value="female" checked> 女
+    </form>
+    <pre>
+        form表单有几种属性，例如&lt;form name="input" action="html_form_action.php" method="get"&gt;
+        其中，form name是表单名，action是表单数据发送至的服务器名，method是发送方法,包含get和post，其中post用于发送隐私数据例如密码
+    </pre>
+    <pre>
+        再来是下拉清单，实现方式是&lt;select name=""&gt;&lt;option value=""&gt;&lt;/option&gt;&lt;/select&gt;组合，如要用于发送数据，则嵌套在表单中
+        如果想设置缺省的预选值，在option的标签内加上selected。如果想要设置缺省的文本，使用input标签中的value属性
+        表单中的恢复默认值可以用type="reset"实现
+    </pre>
+    今天想我几次呀
+    <form>
+        <select name="Miss">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="else" selected>其他<input name="times" type="text" value="好多好多！">次<input name="reset" type="reset" value="重置"></option>
+        </select>
+    </form>
+    <pre>
+        再来是文本框，实现方式是&lt;textarea rows="" cols=""&gt;&lt;/textarea&gt;
+    </pre>
+    <textarea rows="10" cols="30">
+        我是一个文本框哟
+    </textarea>
+    <pre>
+        接着是按钮，实现方式是&lt;button&gt;&lt;/button&gt;
+        表单中的按钮可以用&lt;input type="button" value=""&gt;实现
+        特殊的，表单中的提交按钮可以&lt;input type="submit" value=""&gt;实现
+    </pre>
+    <button>我是button标签的按钮</button>
+    <form>
+        <input type="button" value="我是表单中的按钮"><br />
+        <input type="submit" value="我是提交按钮哦">
+    </form>
+    <pre>
+        使用fieldset和legend标签可以分别设置边框和边框注释，常嵌套于表单中
+    </pre>
+    <fieldset>
+        <legend>您的性别是？</legend>
+        <input type="radio" name="sex" value="male"> 男<br />
+        <input type="radio" name="sex" value="female"> 女
+    </fieldset>
 </body>
 </html>
