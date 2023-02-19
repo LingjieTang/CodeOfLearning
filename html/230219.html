@@ -25,10 +25,13 @@
         &lt;form&gt;
             &lt;input type="checkbox"&gt;
         &lt;/form&gt;
+        以及密码型输入*即不显示输入内容，type指定为password
     </pre>
     <form>
         <input type="checkbox" name="sex" value="male" checked> 男<br />
-        <input type="checkbox" name="sex" value="female" checked> 女
+        <input type="checkbox" name="sex" value="female" checked> 女<br />
+        <input type="checkbox" name="sex" value="others" checked> 其他<br />
+        密码<input type="password" name="sex" value="female"> 
     </form>
     <pre>
         form表单有几种属性，例如&lt;form name="input" action="html_form_action.php" method="get"&gt;
@@ -37,7 +40,8 @@
     <p>本部分没有示例</p>
     <pre>
         再来是下拉清单，实现方式是&lt;select name=""&gt;&lt;option value=""&gt;&lt;/option&gt;&lt;/select&gt;组合，如要用于发送数据，则嵌套在表单中
-        如果想设置缺省的预选值，在option的标签内加上selected。如果想要设置缺省的文本，使用input标签中的value属性
+        如果想设置缺省的预选值，在option的标签内加上selected(在XHTML中需要全写为selected="selected")。
+        如果想要设置缺省的文本，使用input标签中的value属性
         默认的预选值为第一个选项，如果希望默认空白选项，可以创建一个空白选项后用hidden隐藏。
         不希望用户选择的选项可以用disabled调成不可选中
         表单中的恢复默认值可以用type="reset"实现
@@ -76,7 +80,21 @@
         <input type="radio" name="sex" value="female"> 女
     </fieldset>
     <pre>
-
+        网页的内嵌使用iframe标签*inline frame，src属性指定来源，frameborder属性指定边框
+        边框为0即为无边框的意思
     </pre>
+    <iframe name="19" src="230219.html" width="500" height="500" frameborder="500"></iframe>
+    <pre>
+        似乎有防止自身嵌套的功能
+        在内嵌的基础上，可以为内嵌指定名字，从而在使用其他标签时使用target属性指向内嵌的名字将页面加在进其中
+    </pre>
+    <a href="230218.html" target="19">点我将上述页面改成昨天的学习成果</a>
+    <pre>
+        尽管现代计算机采取十六进制表示约1600万种颜色，rgba*a指透明度alpha仍然可以被用来指定颜色
+    </pre>
+    <p style="background-color: rgba(19, 73, 172, 0.5);">
+    比如这段话的背景颜色通过style="background-color: rgba(19, 73, 172, 0.5);"指定
+    </p>
+    
 </body>
 </html>
