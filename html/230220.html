@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <pre>
+    <pre id="p1">
         在style中使用id选择器的格式为#id {attribute1:value1;attribute2:value2}
         id不要以数字开头
     </pre>
@@ -31,11 +31,56 @@
     <h1 class="red">标题红色</h1>
     <p class="red">段落红色。</p>
     <pre>
-        常用的css选择器还包含之前已经学过的标签选择器，比如&lt;style&gt;p{}&lt;/style&gt;，以及直接内连在代码标签中的选择器
+        常用的css选择器还包含之前已经学过的标签选择器，比如&lt;style&gt;div p{}&lt;/style&gt;，以及直接内连在代码标签中的选择器
         优先级为代码选择器&gt;id&gt;class&gt;标签选择器
         css的优先级为内联样式 > 内部样式表 > 外部样式表 > 浏览器样式表
         接下来要学的正是外部样式表，使用时需在头部标签内添加如下语句:
             &lt;link rel="stylesheet" type="text/css" href="xxx.css"&gt;
+
+        <strong>首先学习利用CSS属性定义背景效果:</strong>
+            background-color: 十六进制，rgba，或者颜色名字<br/>
+            background-image: 如需使用网页图片，需使用url函数(参看本网页第一行的背景动图)
+            比如&lt;style&gt;
+                    body {background-image:url('https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif');}
+                &lt;/style&gt;<br/>
+            background-repeat
+                一些图像如果在水平方向与垂直方向平铺，这样看起来很不协调
+                可以限定其只在x或y方向平铺，使用background-repeat:repeat-x/y/norepeat;
+                <style>
+                    #p1 {background-image:url('https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif');}
+                </style>
+            background-attachment
+                background-attachment设置背景图像是否固定或者随着页面的其余部分滚动。<em>(这一部分暂时验证不出来？)</em>
+                    scroll	背景图片随着页面的滚动而滚动，这是默认的。
+                    fixed	背景图片不会随着页面的滚动而滚动。
+                    local	背景图片会随着元素内容的滚动而滚动。<br/>
+            background-position:
+                改变背景图片的位置，如background-position:right top;
+                设置文本到边框的距离也可以帮助图片与文字的混合排版，如margin-right:800px;<br/>
+            同一属性可以被简写，如
+            body
+            {
+                background:#ffffff  no-repeat right top url('https://static.runoob.com/images/mix/img_tree.png');
+                margin-right:200px;
+            }
+
+        <strong>其次学习利用CSS属性定义文字效果:</strong>
+            color:文字颜色<br/>
+            text-align:排版，比如center,right,justify(两端对齐)<br/>
+            text-decoration:用来设置或删除文本的装饰
+            设计目的是删除链接下划线。比如none,overline，line-through,underline<br/>
+            text-transform:大小写转换。比如uppercase，lowercase，capitalize(首字母大写)<br/>
+            text-indent:首行缩进<br/>
+            letter-spacing:<p style="letter-spacing:40px">字符间距 a letter</p>
+            line-height:行高，大多数浏览器的默认行高约为110%至120%。
+            <p style="line-height:20%">
+                这是一个更小行高的段落。<br/>
+                这是一个更小行高的段落。
+            </p>
+            word-spacing:<p style="word-spacing:40px">单词间距 a letter</p>
+            white-space: 对空白的处理方式，默认为normal,常用的为nowrap(不遇见&lt;br&gt;不换行)
+            
+
     </pre>
 </body>
 
