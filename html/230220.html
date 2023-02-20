@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>230219的成果~</title>
+    <link rel="short icon" href="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif">
+    <style>
+        #para1 {
+            text-align: center;
+            color: red;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <pre>
+        在style中使用id选择器的格式为#id {attribute1:value1;attribute2:value2}
+        id不要以数字开头
+    </pre>
+    <p id="para1">Hello World!</p>
+    <p>这个段落不受该样式的影响。</p>
+    <pre>
+        在style中还能使用class选择器，格式为.class {attribute1:value1;attribute2:value2}
+        .class前可加标签符号，比如p.class只作用于段落。class同样不要以数字开头
+    </pre>
+    <h1 class="red">标题红色</h1>
+    <p class="red">段落红色。</p>
+    <pre>
+        常用的css选择器还包含之前已经学过的标签选择器，比如&lt;style&gt;p{}&lt;/style&gt;，以及直接内连在代码标签中的选择器
+        优先级为代码选择器&gt;id&gt;class&gt;标签选择器
+        css的优先级为内联样式 > 内部样式表 > 外部样式表 > 浏览器样式表
+        接下来要学的正是外部样式表，使用时需在头部标签内添加如下语句:
+            &lt;link rel="stylesheet" type="text/css" href="xxx.css"&gt;
+    </pre>
+</body>
+
+</html>
