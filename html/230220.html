@@ -78,9 +78,14 @@
                 这是一个更小行高的段落。
             </p>
             word-spacing:<p style="word-spacing:40px">单词间距 a letter</p>
-            white-space: 对空白的处理方式，默认为normal,常用的为nowrap(不遇见&lt;br&gt;不换行)
-            
-
+            white-space: 对空白的处理方式，默认为normal,常用的为nowrap(不遇见&lt;br&gt;不换行)<br/>
+            vertical-align: 设置文本与其他控件（图片，按钮，单复选框，单行/多行文本框等）的垂直对齐方式
+            默认baseline，选项有top,bottom, text-top, text-bottom等（但是我没搞明白具体区别）
+            也可以是具体像素值，正数为上移（反直觉）
+            <p>一个<img src="http://image.zhangxinxu.com/image/blog/200911/base_line.jpg" alt="interpretation" width="270" height="50" />默认对齐的图像。</p> 
+            <p>一个<img src="http://image.zhangxinxu.com/image/blog/200911/base_line.jpg" alt="interpretation" width="270" height="50" style="vertical-align: top;"/>top对齐的图像。</p> 
+            <p>一个<img src="http://image.zhangxinxu.com/image/blog/200911/base_line.jpg" alt="interpretation" width="270" height="50" style="vertical-align: text-top;"/>text-top对齐的图像。</p> 
+            text-shadow: <div style="text-shadow: 1px 1px blue;">文字阴影</div>(实现方式为复制文本并重叠），格式为2px 2px blue，分别代表x,y方向的偏移以及阴影颜色
     </pre>
 </body>
 
