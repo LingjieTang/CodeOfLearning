@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>230221的成果~</title>
+    <link rel="short icon" href="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif">
+</head>
+
+<body>
+    <pre>
+    <strong>其次学习利用CSS属性定义字体效果:</strong>   
+    font-family: 
+        设置文本的字体系列。
+        建议设置几个字体名称作为一种"后备"机制，如果浏览器不支持第一种字体，他将尝试下一种字体。
+        如p{font-family:"Times New Roman", Times, serif;}
+        这里注意一下，css字体有三种分类:Serif，Sans-serif， Sans-serif
+        <table>
+            <tr>
+                <th>Generic family</th> 
+                <th>字体系列</th>
+                <th>说明</th> 
+            </tr>  
+            <tr>
+                <td>Serif</td>
+                <td style="font-family: 'Times New Roman', Times, serif;">Times New Roman</td>
+                <td>  Serif字体中字符在行的末端拥有额外的装饰</td>
+            </tr>
+            <tr>
+                <td>Sans-serif</td>
+                <td style="font-family: Arial, Helvetica, sans-serif;">Arial</td>
+                <td>  "Sans"是指无 - 这些字体在末端没有额外的装饰</td>
+            </tr>
+            <tr>
+                <td>Monospace</td>
+                <td style="font-family: 'Courier New', Courier, monospace;">Courier New</td>
+                <td>  所有的等宽字符具有相同的宽度</td>
+            </tr>
+        </table>
+    font-style:
+        设置文字斜体，选项有normal,italic,oblique(部分符号没有对应斜体时，强制倾斜所有文字)
+
+    font-size:
+        设置文字大小，可以用像素值设置绝对值(很多浏览器默认16px)，或者设置百分比
+        或者设置相对值(单位em，相对于什么暂时没搞懂)
+        <div style="font-size: 32px;">这句话是32px</div>
+        <div style="font-size: 200%;">这句话是200%</div>
+        <div style="font-size: 2em;">这句话是2em</div>
+    font-weight:
+        设置字体粗细，常用normal,lighter,bold,也可自定义像素值
+    
+    font属性的不同子属性可合并简写，比如:
+        {font:italic bold 12px Georgia,serif;}
+
+
+    <strong>其次学习利用CSS属性定义链接效果:</strong>
+    链接包含四种状态:
+        a:link - 正常，未访问过的链接
+        a:visited - 用户已访问过的链接
+        a:hover - 当用户鼠标放在链接上时 (必须写在link和visited之后)
+        a:active - 链接被点击的那一刻  (必须写在hover之后)
+    
+    链接可设置的属性有
+    颜色(color，正常四种状态分别为蓝、紫，无颜色变化但指针变为手势，红)
+    文本装饰(text-decoration)
+    背景颜色(background-color)等所有文本和字体属性
+    比如:
+        <a target="_blank" href="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif">点我查看兔叽动图</a>
+        <a id="gif2" target="_blank" href="https://p2.itc.cn/q_70/images01/20210725/b10d98bf033e4444861d2c3616e896a7.gif">点我查看一二动图</a>
+        <style>
+            #gif2:link {color:brown}
+            #gif2:visited {color: aquamarine;}
+            #gif2:hover {color:blueviolet;background-color: rgb(248, 154, 32);}
+        </style>
+    
+    <strong>其次学习利用CSS属性定义列表符号效果:</strong>
+    使用list-style-type语句，<b>或者，用list-style-image语句使用自定义图片</b>
+    对于无序列表选项有circle和square
+    <ul>
+        <li style="list-style-type: circle;">Coffee</li>
+        <li style="list-style-type: square;">Tea</li>
+    </ul>
+    对于有序列表选项有decimal和lower/upper-alpha/roman/greek,cjk-ideographic(中文一二三四)等
+    <ol>
+        <li style="list-style-type: decimal;">Coffee</li>
+        <li style="list-style-type: lower-alpha;">Tea</li>
+        <li style="list-style-type: upper-roman;">Tea</li>
+        <li style="list-style-type: cjk-ideographic;">Tea</li>
+        <li style="list-style-type: decimal-leading-zero;">Tea</li>
+        <li style="list-style-type: hiragana;">Tea</li>
+    </ol>
+    自定义图片在不同浏览器中可能效果不同，为解决兼容性问题，需设置列表自身以及列表标记的参数
+    如: 
+    <ul id="ul1">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+    <style>
+        #ul1 {list-style-type:none;padding-top:0px;margin-top:0px;background-color: antiquewhite;}
+        #ul1 li 
+        {   background-image:url(https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif);
+            background-repeat:no-repeat;
+            background-position:0px 0px; 
+            padding-left:60px;
+            margin-left:0px;
+            line-height: 50px;
+            background-size:50px 50px}
+    </style>
+    注意理解margin和padding的不同,在CSS中，使用"box model"这一术语
+    <img src="https://www.runoob.com/images/box-model.gif" alt="box model">
+    不同部分的说明：
+        Margin(外边距) - 清除边框外的区域，外边距是透明的。
+        Border(边框) - 围绕在内边距和内容外的边框。
+        Padding(内边距) - 清除内容周围的区域，内边距是透明的。
+        Content(内容) - 盒子的内容，显示文本和图像。
+    使用width指定宽度(高度亦然)时只是content的属性
+    总元素的宽度=宽度+左填充+右填充+左边框+右边框+左边距+右边距
+    
+</pre>
+</body>
+
+</html>

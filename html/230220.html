@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>230219的成果~</title>
+    <title>230220的成果~</title>
     <link rel="short icon" href="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif">
     <style>
         #para1 {
@@ -38,18 +38,20 @@
             &lt;link rel="stylesheet" type="text/css" href="xxx.css"&gt;
 
         <strong>首先学习利用CSS属性定义背景效果:</strong>
-            background-color: 十六进制，rgba，或者颜色名字<br/>
-            background-image: 如需使用网页图片，需使用url函数(参看本网页第一行的背景动图)
-            比如&lt;style&gt;
+            background-color: 
+                十六进制，rgba，或者颜色名字<br/>
+            background-image: 
+                如需使用网页图片，需使用url函数(参看本网页第一行的背景动图)
+                比如&lt;style&gt;
                     body {background-image:url('https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif');}
                 &lt;/style&gt;<br/>
-            background-repeat
+            background-repeat：
                 一些图像如果在水平方向与垂直方向平铺，这样看起来很不协调
                 可以限定其只在x或y方向平铺，使用background-repeat:repeat-x/y/norepeat;
                 <style>
                     #p1 {background-image:url('https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif');}
                 </style>
-            background-attachment
+            background-attachment：
                 background-attachment设置背景图像是否固定或者随着页面的其余部分滚动。<em>(这一部分暂时验证不出来？)</em>
                     scroll	背景图片随着页面的滚动而滚动，这是默认的。
                     fixed	背景图片不会随着页面的滚动而滚动。
@@ -65,27 +67,38 @@
             }
 
         <strong>其次学习利用CSS属性定义文字效果:</strong>
-            color:文字颜色<br/>
-            text-align:排版，比如center,right,justify(两端对齐)<br/>
-            text-decoration:用来设置或删除文本的装饰
-            设计目的是删除链接下划线。比如none,overline，line-through,underline<br/>
-            text-transform:大小写转换。比如uppercase，lowercase，capitalize(首字母大写)<br/>
-            text-indent:首行缩进<br/>
-            letter-spacing:<p style="letter-spacing:40px">字符间距 a letter</p>
-            line-height:行高，大多数浏览器的默认行高约为110%至120%。
-            <p style="line-height:20%">
-                这是一个更小行高的段落。<br/>
-                这是一个更小行高的段落。
-            </p>
-            word-spacing:<p style="word-spacing:40px">单词间距 a letter</p>
-            white-space: 对空白的处理方式，默认为normal,常用的为nowrap(不遇见&lt;br&gt;不换行)<br/>
-            vertical-align: 设置文本与其他控件（图片，按钮，单复选框，单行/多行文本框等）的垂直对齐方式
-            默认baseline，选项有top,bottom, text-top, text-bottom等（但是我没搞明白具体区别）
-            也可以是具体像素值，正数为上移（反直觉）
-            <p>一个<img src="http://image.zhangxinxu.com/image/blog/200911/base_line.jpg" alt="interpretation" width="270" height="50" />默认对齐的图像。</p> 
-            <p>一个<img src="http://image.zhangxinxu.com/image/blog/200911/base_line.jpg" alt="interpretation" width="270" height="50" style="vertical-align: top;"/>top对齐的图像。</p> 
-            <p>一个<img src="http://image.zhangxinxu.com/image/blog/200911/base_line.jpg" alt="interpretation" width="270" height="50" style="vertical-align: text-top;"/>text-top对齐的图像。</p> 
-            text-shadow: <div style="text-shadow: 1px 1px blue;">文字阴影</div>(实现方式为复制文本并重叠），格式为2px 2px blue，分别代表x,y方向的偏移以及阴影颜色
+            color:
+                文字颜色<br/>
+            text-align:
+                排版，比如center,right,justify(两端对齐)<br/>
+            text-decoration:
+                用来设置或删除文本的装饰
+                设计目的是删除链接下划线。比如none,overline，line-through,underline<br/>
+            text-transform:
+                大小写转换。比如uppercase，lowercase，capitalize(首字母大写)<br/>
+            text-indent:
+                首行缩进<br/>
+            letter-spacing:
+                <p style="letter-spacing:40px">字符间距 a letter</p>
+            line-height:
+                行高，大多数浏览器的默认行高约为110%至120%。
+                <p style="line-height:20%">
+                    这是一个更小行高的段落。<br/>
+                    这是一个更小行高的段落。
+                </p>
+            word-spacing:
+                <p style="word-spacing:40px">单词间距 a letter</p>
+            white-space: 
+                对空白的处理方式，默认为normal,常用的为nowrap(不遇见&lt;br&gt;不换行)<br/>
+            vertical-align: 
+                设置文本与其他控件（图片，按钮，单复选框，单行/多行文本框等）的垂直对齐方式
+                默认baseline，选项有top,bottom, text-top, text-bottom等（但是我没搞明白具体区别）
+                也可以是具体像素值，正数为上移（反直觉）
+                <p>一个<img src="http://image.zhangxinxu.com/image/blog/200911/base_line.jpg" alt="interpretation" width="270" height="50" />默认对齐的图像。</p> 
+                <p>一个<img src="http://image.zhangxinxu.com/image/blog/200911/base_line.jpg" alt="interpretation" width="270" height="50" style="vertical-align: top;"/>top对齐的图像。</p> 
+                <p>一个<img src="http://image.zhangxinxu.com/image/blog/200911/base_line.jpg" alt="interpretation" width="270" height="50" style="vertical-align: text-top;"/>text-top对齐的图像。</p> 
+            text-shadow: 
+                <div style="text-shadow: 1px 1px blue;">文字阴影</div>(实现方式为复制文本并重叠），格式为2px 2px blue，分别代表x,y方向的偏移以及阴影颜色<br/>
     </pre>
 </body>
 
