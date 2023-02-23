@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>230223的成果~</title>
+    <link rel="short icon" href="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif">
+</head>
+
+<body>
+    <pre>
+        <strong>表格样式：
+        border：同昨天学的border，可对table,th,td分别设置，如:</strong>
+        <table>
+            <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            </tr>
+            <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+            </tr>
+            <tr>
+            <td>Lois</td>
+            <td>Griffin</td>
+            </tr>
+        </table>
+        <style>
+            table,th,td
+            {
+                border:1px solid blue; 
+            }
+        </style>
+        请注意，在上面的例子中的表格有双边框。这是因为表和th/ td元素有独立的边界。
+        为了显示一个表的单个边框，使用 border-collapse属性。
+        border-collapse:collapse;
+        此外，使用caption-side:bottom;可以将表格标题置于其他位置
+        <table class="collapse">
+            <caption>Table 1.1 Customers</caption>
+            <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            </tr>
+            <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+            </tr>
+            <tr>
+            <td>Lois</td>
+            <td>Griffin</td>
+            </tr>
+        </table>
+        <style>
+            table.collapse
+            {
+                border-collapse:collapse;
+                caption-side:bottom;
+            }
+        </style>
+        <strong>width/height指定单元格的长宽，background-color指定背景色
+            单元格内的文本格式同对文本的格式指定
+            比如padding，text-align,vertical-align等
+        </strong>
+        <strong>outline指定box-model中border外侧的样式(color/style/width)
+        </strong>
+        <p style="border:1px solid red;outline:green dotted thick;">比如这句话</p>
+
+        <strong>分组选择器: </strong>
+            h1,h2,p
+            {
+                color:green;
+            }
+
+        <strong>嵌套选择器:</strong>
+            它可能适用于选择器内部的选择器的样式。
+            在下面的例子设置了四个样式：
+            p{ }: 为所有 p 元素指定一个样式。
+            .marked{ }: 为所有 class="marked" 的元素指定一个样式。
+            .marked p{ }: 为所有 class="marked" 元素内的 p 元素指定一个样式。
+            p.marked{ }: 为所有 class="marked" 的 p 元素指定一个样式。
+            <a style="display: block;" target="_blank" href="https://www.runoob.com/try/try.php?filename=trycss_nesting">点我查看例子</a>
+       
+        注意看，上面的链接是块级元素(block)而不是内联元素(inline)，其前后有换行
+        这是通过<strong>display:block/inline</strong>切换的
+
+        <strong>隐藏一个元素可以通过把display属性设置为"none"，或把visibility属性设置为"hidden"。</strong>
+        但是请注意，这两种方法会产生不同的结果。
+        visibility:hidden可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间。也就是说，该元素虽然被隐藏了，但仍然会影响布局。
+        <b>visibility:hidden</b>
+        <p style="float: left;">这是左段落</p>
+        <p style="float: left;visibility:hidden">这是中段落</p>
+        <p style="float: left;">这是右段落</p><br/>
+        <b style="float: left;clear: both;display: inline;">display:none</b>
+        <p style="float: left;clear: both;">这是左段落</p>
+        <p style="float: left;display:none">这是中段落</p>
+        <p style="float: left;">这是右段落</p>
+    </pre>
+</body>
+
+</html>
