@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>230223的成果~</title>
+    <link rel="short icon" href="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif">
+</head>
+
+<body>
+    <pre>
+        <strong>关于昨天学的visibility,还有一个选项是collapse</strong>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+            tr.collapse {
+                visibility: collapse;
+            }
+            tr.hidden {
+                visibility: hidden;
+            }
+            tr.none {
+                display:none;
+            }
+            </style>
+        这是把第二行visibility: collapse，第三行visibility: hidden，第四行display:none的表格
+        中间的空白行是第三行
+        <table>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+            </tr>
+            <tr>
+              <td>1st</td>
+              <td>Griffin</td>
+            </tr>
+            <tr class="collapse">
+              <td>2nd</td>
+              <td>Griffin</td>
+            </tr>
+            <tr class="hidden">
+                <td>3rd</td>
+                <td>Griffin</td>
+            </tr>
+            <tr class="none">
+                <td>4th</td>
+                <td>Griffin</td>
+            </tr>
+            <tr>
+                <td>5th</td>
+                <td>Griffin</td>
+            </tr>
+        </table>
+
+        <strong>css中给元素定位有五种方式:</strong>
+        static:
+            HTML 元素的默认值，即没有定位，遵循正常的文档流对象。
+            静态定位的元素不会受到 top, bottom, left, right影响。
+        relative:
+            相对定位元素的定位是相对其正常位置。
+            移动相对定位元素可能导致元素在显示时重合，但它原本所占的空间不会改变。
+        fixed:
+            元素的位置相对于浏览器窗口是固定位置。
+            即使窗口是滚动的它也不会移动
+            Fixed定位使元素的位置与文档流无关，因此不占据空间，可能和其他元素重叠。
+        absolute:
+            绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于&lt;html&gt;:
+            absolute 定位使元素的位置与文档流无关，因此不占据空间，可能和其他元素重叠。
+        sticky:
+            粘性定位的元素是依赖于用户的滚动，在 position:relative 与 position:fixed 定位之间切换。
+            它的行为就像 position:relative; 而当页面滚动超出目标区域时，它的表现就像 position:fixed;，它会固定在目标位置。
+            元素定位表现为在跨越特定阈值前为相对定位，之后为固定定位。
+            这个特定阈值指的是 top, right, bottom 或 left 之一，换言之，指定 top, right, bottom 或 left 四个阈值其中之一，才可使粘性定位生效。否则其行为与相对定位相同。
+        <style>
+            div.sticky {
+                position: sticky;
+                top: 0;
+                padding: 5px;
+                background-color: #cae8ca;
+                border: 2px solid #4CAF50;
+            }
+            p.fixed{
+                position:fixed;
+                top:60%;
+                right:5px;
+                padding: 5px;
+                background-color: #cae8ca;
+                border: 2px solid #4CAF50;
+            }
+            p.relative{
+                position:relative;
+                top:-60px;
+                padding: 5px;
+                background-color: #cae8ca;
+                border: 2px solid #4CAF50;
+                z-index:-1;
+            }
+            p.absolute{
+                position:absolute;
+                padding: 5px;
+                left:50%;
+	            top:60%;
+                background-color: rgb(128, 128, 248);
+                border: 2px solid #4CAF50;
+            }
+        </style>
+        <div class="sticky">我是sticky定位!</div>
+        <p class="fixed">我是fixed定位!</p>
+        <p class="relative">我是relative定位!占据了原本的空间*下面的空行</p>
+        <div style="padding-bottom:1000px">
+            <p>滚动我</p>
+            <p>来回滚动我</p>
+            <p class="absolute">我是absolute定位!</p>
+            <p>滚动我</p>
+            <p>来回滚动我</p>
+            <p>滚动我</p>
+            <p>来回滚动我</p>
+        </div>
+        <strong>z-index</strong>属性指定了一个元素的堆叠顺序（哪个元素应该放在前面，或后面）
+        一个元素可以有正数或负数的堆叠顺序：
+        具有更高堆叠顺序的元素总是在较低的堆叠顺序元素的前面。
+        注意： 如果两个定位元素重叠，没有指定z-index，最后定位在HTML代码中的元素将被显示在最前面。
+        在刚才，relative定位的z-index指定为-1，故显示在后面
+
+        <strong>clip:rect (top, right, bottom, left)可以指定裁剪一个绝对定位的元素
+            这四个值略显奇怪，right为横向保留多少，其余三个值为裁剪掉多少
+        </strong>
+        <img src="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif" width="100" height="140" />
+        <style>
+            img 
+            {
+                position:absolute;
+                clip:rect(0px,120px,100px,0px);
+            }
+        </style>
+
+
+
+
+
+        <strong>cursor:用于控制鼠标指针放在对应元素上时的鼠标指针变化</strong>
+        <span style="cursor:auto">auto</span><br>
+        <span style="cursor:crosshair">crosshair</span><br>
+        <span style="cursor:default">default</span><br>
+        <span style="cursor:e-resize">e-resize</span><br>
+        <span style="cursor:help">help</span><br>
+        <span style="cursor:move">move</span><br>
+        <span style="cursor:n-resize">n-resize</span><br>
+        <span style="cursor:ne-resize">ne-resize</span><br>
+        <span style="cursor:nw-resize">nw-resize</span><br>
+        <span style="cursor:pointer">pointer</span><br>
+        <span style="cursor:progress">progress</span><br>
+        <span style="cursor:s-resize">s-resize</span><br>
+        <span style="cursor:se-resize">se-resize</span><br>
+        <span style="cursor:sw-resize">sw-resize</span><br>
+        <span style="cursor:text">text</span><br>
+        <span style="cursor:w-resize">w-resize</span><br>
+        <span style="cursor:wait">wait</span><br>
+    </pre>
+
+    
+    
+</body>
+
+</html>
