@@ -21,22 +21,76 @@
         注意:overflow 属性只工作于指定高度的块元素上。
         注意: 在 OS X Lion ( Mac 系统) 系统上，滚动条默认是隐藏的，使用的时候才会显示 (设置 "overflow:scroll" 也是一样的)。
     </pre>
-        <span class="visible">
+        <div class="visible">
+            这里是visible的overflow，也是默认值。<br/>
+            这里是visible的overflow，也是默认值。<br/>
+            这里是visible的overflow，也是默认值。<br/>
             这里是visible的overflow，也是默认值。
-            这里是visible的overflow，也是默认值。
-            这里是visible的overflow，也是默认值。
-            这里是visible的overflow，也是默认值。
-        </span>
+        </div>
+        <div class="hidden">
+            这里是hidden的overflow。<br/>
+            这里是hidden的overflow。<br/>
+            这里是hidden的overflow。<br/>
+            这里是hidden的overflow。
+        </div>
+        <br/>
+        <div class="scroll">
+            这里是scroll的overflow。<br/>
+            这里是scroll的overflow。<br/>
+            这里是scroll的overflow。<br/>
+            这里是scroll的overflow。
+        </div>
+        <div class="auto">
+            这里是auto的overflow。<br/>
+            这里是auto的overflow。<br/>
+            这里是auto的overflow。<br/>
+            这里是auto的overflow。
+        </div>
         <style>
-            span.visible{
-                background: rgba(194, 240, 173, 0.4);
+            div.visible{
+                background: rgba(194, 240, 173, 0.3);
                 color: rgb(113, 205, 252);
                 margin: 0px;
                 padding: 0px;
-                width: 10%;
+                width: 50%;
                 height: 30px;
+                font-size: 30px;
                 border: 1px solid #ccc;
             }
+            div.hidden{
+                background: rgba(102, 254, 82, 0.3);
+                color: rgb(252, 113, 164);
+                margin: 0px;
+                padding: 0px;
+                width: 50%;
+                height: 16px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                overflow: hidden;
+            }
+            div.scroll{
+                background: rgba(102, 254, 82, 0.3);
+                color: rgb(252, 113, 164);
+                margin: 0px;
+                padding: 0px;
+                width: 60px;
+                height: 32px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                overflow: scroll;
+            }
+            div.auto{
+                background: rgba(102, 254, 82, 0.3);
+                color: rgb(252, 113, 164);
+                margin: 0px;
+                padding: 0px;
+                width: 60px;
+                height: 32px;
+                font-size: 14px;
+                border: 1px solid #ccc;
+                overflow: auto;
+            }
+            
         </style>
     
 </body>
