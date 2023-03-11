@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>2302310的成果~</title>
+    <link rel="short icon" href="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif">
+</head>
+
+<body>
+    <pre>
+    <strong>
+        CSS 的 Float（浮动），会使元素向左或向右移动，其周围的元素也会重新排列。
+        Float（浮动），往往是用于图像，但它在布局时一样非常有用。
+    </strong>
+        flow属通常为left或者right
+        浮动元素之后的全部元素都将收到影响，需要清除时运用clear:both
+</pre>
+    在下面的段落中,图像将向右浮动。黑色虚线边界添加到图像。<br />
+    我们还添加了margin和padding, 使得文本远离图片:
+    <img id="a" src="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif" alt="rabbit" height="50px">
+
+    <style>
+        #a {
+            float: left;
+            border: 3px dotted rgb(252, 151, 0);
+            margin: 14px 14px 0px 0px;
+            padding: 14px;
+            clear: both;
+        }
+    </style>
+    <br /><br /><br /><br /><br /><br />
+    运用float可以创建无表格的网页布局，比如:
+    <ul class="topmenu">
+        <li><a href="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif" class="active" target="_blank"
+                title="rabbit">主页</a></li>
+        <li><a href="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif">新闻</a></li>
+        <li><a href="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif">联系我们</a></li>
+        <li><a href="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif">关于我们</a></li>
+    </ul>
+    <style>
+        .topmenu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .topmenu li {
+            float: left;
+            background-color: #16b5ff;
+        }
+
+        .topmenu li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .topmenu li a:hover {
+            background-color: #222;
+        }
+
+        .topmenu li a.active {
+            background-color: #4CAF50;
+        }
+
+        .topmenu li a:active {
+            background-color: #f57812;
+        }
+    </style>
+
+</body>
+
+</html>
