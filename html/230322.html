@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>230322的成果~</title>
+    <link rel="short icon" href="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif">
+</head>
+
+<body>
+    <strong>
+        要水平居中对齐一个块级元素(如 &lt;div&gt;), 可以使用 margin: auto;<br/>
+    </strong>
+        前提是设置了 width 属性<br/>
+        对于图片，由于自带width属性不用设置，只需要使用display:block;转换为块级元素即可
+    <div class="center">
+        <p>这个DIV元素被水平居中</p>
+    </div>
+    <img id="Paris" src="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif" alt="Rabbit"  width="170px" height="170px">
+    <style>
+        .center {
+            margin: auto;
+            width: 50%;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+        #Paris {
+            display:block;
+            margin: auto;
+        }
+    </style>
+
+     <strong>
+        如果想要文本居中，是用之前学过的text-align: center;<br/><br/>
+        如果想要左右对齐，可以使用之前学过的position来进行绝对定位，
+        比如右对齐的实现方法为: <br/>
+        position: absolute;
+        right: 0px;<br/>
+    </strong>
+        由于绝对定位不存在于正常的文本流中，当使用 position 来对齐元素时, 
+        通常 &lt;body&gt; 元素会设置 margin 和 padding 。 这样可以避免在不同的浏览器中出现可见的差异。<br/>
+
+    <strong>
+        左右对齐也可以使用之前学过的float来实现<br/>
+        若如此做，注意子元素与父元素的高度差异，在父元素上设置overflow:auto来清除可能存在的高度溢出问题
+    </strong>   
+    <div style="border: 3px solid #4CAF50;padding: 5px;">
+        <img class="img1" src="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif" alt="Rabbit"  width="170" height="170" style="float: right;">
+        这是不设置overflow的
+    </div>     
+    <div style="border: 3px solid #4CAF50;padding: 5px;overflow: auto;clear:right;">
+        <img class="img2" src="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif" alt="Rabbit" width="170" height="170" style="float: right">
+        在父元素上通过添加 clearfix 类，并设置 overflow: auto; 来解决该问题
+    </div><br/><br/>
+
+
+    <strong>
+        实现文本垂直居中最简单的方式就是使用padding;<br/>
+        其次对于div容器内的文本，如果div没有设定高度，则文本能撑开div，通过padding即可实现文本垂直居中，如下
+    </strong>
+    <div class="center">
+        <p>我是垂直居中的。我是垂直居中的。我是垂直居中的。我是垂直居中的。我是垂直居中的。</p>
+    </div>
+    但如果div自带高度（下例中为100px），对于单行文本可以令行高line-height等于div高度
+    <div class="px100">
+        我是垂直居中的。我是垂直居中的。
+    </div>
+    多行文本如果只是令行高line-height等于div高度会令第二行开始溢出容器
+    <div class="px100">
+        我是垂直居中的。我是垂直居中的。我是垂直居中的。我是垂直居中的。
+    </div>
+    这个时候应在div内再设一个元素，如p元素，并重新设定该p元素的样式(line-height: xx;display: inline-block;vertical-align: middle;)
+    <div class="px100">
+        <p id="ppx100">我是垂直居中的。我是垂直居中的。我是垂直居中的。我是垂直居中的。</p>
+    </div>
+    <style>
+    .px100 {
+            width: 300px;
+            height: 100px;
+            line-height: 100px;
+            border: 3px solid #2f21ad;
+            vertical-align: middle;
+
+    }
+    #ppx100 {
+        line-height: 1em;
+        display: inline-block;
+        vertical-align: middle;
+        color: rgb(0, 145, 145);
+    }
+    </style>
+
+
+</body>
+
+</html>
