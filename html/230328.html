@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>230328的成果~ 组合选择器</title>
+    <link rel="short icon" href="https://media.tenor.com/LFyla7-YLv4AAAAd/%E5%85%94%E5%85%94.gif">
+</head>
+
+<body>
+    <pre style="font-size: larger;">
+        在 CSS3 中包含了四种组合方式: （这是自我翻译）
+        全体后代选择器(以空格 分隔)
+        直接子代选择器(以大于 > 号分隔）
+        相邻弟弟选择器（以加号 + 分隔）
+        全体弟弟选择器（以波浪号 ～ 分隔）
+    </pre>
+    <strong>
+        首先是全体后代选择器(空格)，黄色背景
+    </strong>
+    <div class="all">
+        <p>段落 1。 在 div1 中。</p>
+        <div>
+            <p>段落 2。 在 div1内的div2 中。</p>
+        </div>
+        <p>段落 3。 在 div1 中。</p>
+    </div>
+
+    <p>段落 4。不在 div 中。</p>
+    <p>段落 5。不在 div 中。</p>
+    <style>
+        div.all p {
+            background-color: yellow;
+        }
+    </style>
+    <strong>
+        <br/>其次是直接子代选择器(>)，蓝色字体
+    </strong>
+    <style>
+        div.all>p {
+            color: rgb(46, 196, 250);
+        }
+    </style>
+    <strong>
+        <br/><br/>其次是相邻弟弟选择器(+)，大号加粗字体
+        相邻弟弟选择器（Adjacent sibling selector）可选择紧接在另一元素后的弟弟元素，且二者有相同父元素。
+    </strong>
+    <style>
+        div.all+p {
+            font-size: larger;
+            font-weight: bold;
+        }
+    </style>
+    <strong>
+        <br/><br/>其次是全体弟弟选择器(~)，红色边框
+    </strong>
+    <style>
+        div.all~p {
+            border: 1px solid red;
+        }
+    </style>
+</body>
+
+</html>
